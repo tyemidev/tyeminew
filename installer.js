@@ -25,9 +25,7 @@ var installer = filename => {
         };
 
         // stringification
-        let temp = document.createElement("div");
-        temp.appendChild(doc);
-        let docstr = temp.innerHTML
+        let docstr = doc.outerHTML
         
         // data uri
         let bsf = btoa(docstr)
