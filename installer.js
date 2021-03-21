@@ -34,7 +34,7 @@ var installer = filename => {
         let data = `data:text/html;base64,${bsf}`
 
         // clipboard
-        let field = document.createElement(input)
+        let field = document.createElement('input')
         field.value = data
         document.body.appendChild(field)
         field.select();
