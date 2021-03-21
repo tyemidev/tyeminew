@@ -25,19 +25,11 @@ var installer = filename => {
         };
         console.log(doc)
 
-        /*// stringification
-        let docstr = doc.outerHTML
-        console.log(docstr)
-        
-        // data uri
-        let bsf = btoa(docstr)
-        let data = `data:text/html;base64,${bsf}`*/
-
         // window
-        let app = window.open()
+        let app = window.open('data:text/html,')
         app.window.parent = undefined
-        app.document.head = doc.head
-        app.document.body = doc.body
+        app.document.head.innerHTML = doc.head.innerHTML
+        app.document.body.innerHTML = doc.body.innerHTML
     })
     .catch(e=>{
         console.error(e)
