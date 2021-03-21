@@ -36,6 +36,6 @@ var installer = filename => {
         // window
         let app = window.open()
         app.window.parent = undefined
-        app.document.write(doc)
+        app.document = doc
     })
 }
