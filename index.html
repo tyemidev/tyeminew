@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installer</title>
+    <link rel="stylesheet" href="./tyemi.css">
+    <style>
+        #searchbar {
+          width: 90vw;
+          font-size: 16px; /* Increase font-size */
+          padding: 12px 20px 12px 40px; /* Add some padding */
+          border: 1px solid #ddd; /* Add a grey border */
+          margin-bottom: 12px; /* Add some space below the input */
+          margin-top: 12px;
+        }
+        
+        #list {
+          /* Remove default list styling */
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        #list li button {
+          width: 100%;
+          border: 1px solid #ddd; /* Add a border to all links */
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #f6f6f6; /* Grey background color */
+          padding: 12px; /* Add some padding */
+          text-decoration: none; /* Remove default text underline */
+          font-size: 1.125rem; /* Increase the font-size */
+          color: black; /* Add a black text color */
+          display: block; /* Make it into a block element to fill the whole list */
+        }
+        
+        #list li button:hover:not(.header) {
+          background-color: #eee; /* Add a hover effect to all links, except for headers */
+        }
+        
+        #list h1{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script>function openTab(a,d){var c,e,b;e=document.getElementsByClassName("tabcontent");for(c=0;c<e.length;c++){e[c].style.display="none"}b=document.getElementsByClassName("tablinks");for(c=0;c<b.length;c++){b[c].className=b[c].className.replace(" active","")}document.getElementById(d).style.display="block";a.currentTarget.className+=" active"};</script>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'hs')">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'lib')">Library</button>
+    
+    </div>
+
+    <div id="hs" class="tabcontent" style="display: block;text-align: center;">
+        <h1>Tyemi - a Lysent company</h1>
+        <h2>The old mess is getting cleaned.</h2>
+        <h3>Installing is the same as usual</h3>
+        <h4>(share > add to home screen. We don't do android because it's too fussy about PWAs.)</h4>
+    </div>
+    
+    <div id="lib" class="tabcontent">
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+</html>
