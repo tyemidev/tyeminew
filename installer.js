@@ -26,7 +26,7 @@ var installer = filename => {
         console.log(doc)
 
         // window
-        let app = window.open('data:text/html,')
+        let app = window.open('http://example.com/')
         app.window.parent = undefined
         app.document.head.innerHTML = doc.head.innerHTML
         app.document.body.innerHTML = doc.body.innerHTML
