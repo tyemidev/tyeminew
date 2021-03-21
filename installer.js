@@ -25,11 +25,22 @@ var installer = filename => {
         };
         console.log(doc)
 
-        // window
-        let app = window.open('http://example.com/')
-        app.window.parent = undefined
-        app.document.head.innerHTML = doc.head.innerHTML
-        app.document.body.innerHTML = doc.body.innerHTML
+        // stringification
+        let docstr = doc.outerHTML
+        console.log(docstr)
+        
+        // data uri
+        let bsf = btoa(docstr)
+        let data = `data:text/html;base64,${bsf}`
+
+        // clipboard
+        let field = document.createElement(input)
+        field.value = data
+        document.body.appendChild(field)
+        field.select();
+        field.setSelectionRange(0, 999999); /* For mobile devices */
+        document.execCommand("copy");
+        document.body.removeChild(field);
     })
     .catch(e=>{
         console.error(e)
