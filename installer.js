@@ -32,7 +32,8 @@ var installer = filename => {
         let data = `data:text/html;base64,${bsf}`
 
         // window
-        let app = window.open(data)
+        let app = window.open()
         app.window.parent = undefined
+        app.location.href = data
     })
 }
