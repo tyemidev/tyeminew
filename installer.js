@@ -36,6 +36,10 @@ var installer = filename => {
         // window
         let app = window.open()
         app.window.parent = undefined
-        app.document = doc
+        app.document.head = doc.head
+        app.document.body = doc.body
+    })
+    .catch(e=>{
+        console.error(e)
     })
 }
