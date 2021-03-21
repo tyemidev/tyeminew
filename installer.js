@@ -23,17 +23,19 @@ var installer = filename => {
                 script.remove()
             })
         };
+        console.log(doc)
 
-        // stringification
+        /*// stringification
         let docstr = doc.outerHTML
+        console.log(docstr)
         
         // data uri
         let bsf = btoa(docstr)
-        let data = `data:text/html;base64,${bsf}`
+        let data = `data:text/html;base64,${bsf}`*/
 
         // window
         let app = window.open()
         app.window.parent = undefined
-        app.location.href = data
+        app.document.write(doc)
     })
 }
