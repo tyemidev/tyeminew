@@ -34,6 +34,5 @@ var installer = filename => {
         // window
         let app = window.open(data)
         app.window.parent = undefined
-        window.close()
     })
 }
