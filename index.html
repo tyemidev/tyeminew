@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Installer</title>
     <link rel="stylesheet" href="./tyemi.css">
     <style>
@@ -65,11 +67,11 @@
     <div id="lib" class="tabcontent">
         <ul id="list">
           <h1>Tyemi originals</h1>
-          <li></li>
+          <li><button onclick="window.open('./app/disunity.html')"></button></li>
 
           <h1>PWAified sites</h1>
-          <li><button onclick="installer('scp')">SCP wiki</button></li>
-          <li><button onclick="installer('monstercat')">Monstercat</button></li>
+          <li><button onclick="window.open('./app/scp.html')">SCP wiki</button></li>
+          <li><button onclick="window.open('./app/monstercat.html')">Monstercat</button></li>
         </ul>
     </div>
 </body>
